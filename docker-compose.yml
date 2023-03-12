@@ -7,7 +7,7 @@ services:
       - /volume1/docker/homeassistant/zigbee2mqtt/data:/app/data
       - /run/udev:/run/udev:ro
     devices:
-      - /dev/ttyACM0:/dev/ttyACM0
+      - tcp://192.168.50.151:5000:/tcp://192.168.50.151:5000
     restart: always
     network_mode: host
     privileged: true
